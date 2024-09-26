@@ -19,3 +19,11 @@ $ mysqldef -uroot eko_test < schema.sql
 ## data seed
 
 $ mysql -uroot eko_development < seed.sql
+
+## ORM
+
+$ brew install sqlboiler
+
+### generate model code from table
+
+MYSQL_DBNAME=eko_development MYSQL_USER=root MYSQL_HOST=127.0.0.1 MYSQL_SSLMODE=false sqlboiler mysql
